@@ -1,0 +1,127 @@
+{% extends 'modal_base.html' %}
+{% block modal_body %}
+  <form class="form-horizontal">
+    
+    <div class="form-group">
+      <label class="control-label col-sm-3">Haemodialysis</label>
+      <div class="col-sm-8">
+	<input class="form-control" type="checkbox" ng-model="editing.haemodialysis">
+      </div>
+    </div>
+
+    <div class="form-group" ng-show="editing.haemodialysis">
+      <label class="control-label col-sm-3">Access Site</label>
+      <div class="col-sm-8">
+	<input class="form-control" type="text"
+               ng-model="editing.access_site"
+               ng-options="d for d in access_site_list"
+               bs-typeahead
+               >
+      </div>
+    </div>
+    <div class="form-group" ng-show="editing.haemodialysis">
+      <label class="control-label col-sm-3">Regional Dialysis Unit</label>
+      <div class="col-sm-8">
+	<input class="form-control" type="text" ng-model="editing.regional_unit" >
+      </div>
+    </div>
+    <div ng-show="editing.haemodialysis">
+      <h4>Dialysis Days</h4>
+      <table>
+        <tr>
+	  <td>
+	    <label class="checkbox inline">
+	      <input class="" type="checkbox" ng-model="editing.day_mon">
+	      Monday
+	    </label>
+	  </td>
+	  <td>
+	    <label class="checkbox inline">
+	      <input class="" type="checkbox" ng-model="editing.day_tue">
+	      Tuesday
+	    </label>
+	  </td>
+	  <td>
+	    <label class="checkbox inline">
+	      <input class="" type="checkbox" ng-model="editing.day_wed">
+	      Wednesday
+	    </label>
+	  </td>
+	  <td>
+	    <label class="checkbox">
+	      <input class="" type="checkbox" ng-model="editing.day_thu">
+	      Thursday
+	    </label>
+	  </td>
+	  <td>
+	    <label class="checkbox inline">
+	      <input class="" type="checkbox" ng-model="editing.day_fri">
+	      Friday
+	    </label>
+	  </td>
+	  <td>
+	    <label class="checkbox inline">
+	      <input class="" type="checkbox" ng-model="editing.day_sat">
+	      Saturday
+	    </label>
+	  </td>
+	  <td>
+	    <label class="checkbox inline">
+	      <input class="" type="checkbox" ng-model="editing.day_sun">
+	      Sunday
+	    </label>
+	  </td>
+        </tr>    
+      </table>
+      <a href="" class="btn btn-primary" ng-click="prepopulate($event)" 
+         data-day_mon="true" data-day_wed="true" data-day_fri="true">
+        MWF
+      </a>
+      <a href="" class="btn btn-primary" ng-click="prepopulate($event)" 
+         data-day_tue="true" data-day_thu="true" data-day_sat="true">
+        TTS
+      </a>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label col-sm-3">Peritonealdialysis</label>
+      <div class="col-sm-8">
+	<input class="form-control" type="checkbox" ng-model="editing.peritonealdialysis">
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <label class="control-label col-sm-3">No RRT</label>
+      <div class="col-sm-8">
+	<input class="form-control" type="checkbox" ng-model="editing.no_rt">
+      </div>
+    </div>
+    
+
+    <div class="form-group">
+      <label class="control-label col-sm-3">Transplant</label>
+      <div class="col-sm-8">
+	<input class="form-control" type="checkbox" ng-model="editing.transplant">
+      </div>
+    </div>
+    
+    <div class="form-group" ng-show="editing.transplant">
+      <label class="control-label col-sm-3">Donor Type</label>
+      <div class="col-sm-8">
+
+        <label class="radio-inline">
+          <input class="" type="radio" value="DCD" ng-model="editing.donor_type">
+          DCD
+        </label>
+
+        <label class="radio-inline">
+          <input class="" type="radio" value="DBD" ng-model="editing.donor_type">
+          DBD
+        </label>
+
+      </div>
+    </div>
+
+    
+  </form>
+{% endblock %}

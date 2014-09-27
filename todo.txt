@@ -1,0 +1,12 @@
+
+RRT IF HAEMOD:
+    Dialysis days common cases are:
+    MWF
+    TTS
+Allergies. (Display above PMH)
+
+
+Daily Review Sheet
+Discharge
+Details view
+Dialysis

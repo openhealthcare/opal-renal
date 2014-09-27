@@ -1,0 +1,21 @@
+{% extends 'modal_base.html' %}
+{% block modal_body %}
+  <form class="form-horizontal">
+    <div class="form-group">
+      <label class="control-label col-sm-3">Resuscitate?</label>
+      <div class="col-sm-8">
+
+        <label class="radio-inline">
+          <input class="" type="radio" value="DNAR" ng-model="editing.dnr">
+          DNAR
+        </label>
+
+        <label class="radio-inline">
+          <input class="" type="radio" value="Full" ng-model="editing.dnr">
+          Full
+        </label>
+
+      </div>
+    </div>
+  </form>
+{% endblock %}

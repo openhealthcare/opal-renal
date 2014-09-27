@@ -1,0 +1,10 @@
+<span ng-hide="$index < 3">...</span>
+<ul ng-show="$index < 3">
+  <li>
+    <b>
+      [[item.date | shortDate]]
+      ([[item.initials]]<span ng-show="item.discussed_with"> with [[item.discussed_with]]</span>)
+      [[item.reason_for_interaction]]
+    </b>
+  </li>
+</ul>

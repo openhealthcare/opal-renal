@@ -1,0 +1,118 @@
+{% extends 'modal_base.html' %}
+{% block modal_body %}
+  <div class="well">
+    <small class="text-warning">
+      Entries made in this clinical advice cannot be edited after saving. Any further modifications to clinical advice given will require a new entry
+    </small>
+  </div>
+  <form class="form-horizontal" ng-hide="editing.consistency_token">
+    <div class="form-group">
+      <label class="control-label col-sm-3">Date</label>
+      <div class="col-sm-8">
+	<input class="form-control" type="text" ng-model="editing.date" bs-datepicker>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-3">Advice given by</label>
+      <div class="col-sm-8">
+	<input class="form-control" type="text" ng-model="editing.initials" autofocus>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-3">Reason for clinical interaction</label>
+      <div class="col-sm-8">
+        <select class="form-control" ng-model="editing.reason_for_interaction">
+          <option ng-repeat="reason in clinical_advice_reason_for_interaction_list">[[reason]]</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-3">Clinical discussion</label>
+      <div class="col-sm-8">
+	<textarea class="form-control" ng-model="editing.clinical_discussion" rows="5"></textarea>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-3">Agreed plan</label>
+      <div class="col-sm-8">
+	<textarea class="form-control" ng-model="editing.agreed_plan" rows="5"></textarea>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-3">Discussed with</label>
+      <div class="col-sm-8">
+	<input class="form-control" type="text" ng-model="editing.discussed_with">
+      </div>
+    </div>
+
+    <table>
+      <tr>
+	<td>
+	  <label class="checkbox inline">
+	    <input class="" type="checkbox" ng-model="editing.clinical_advice_given">
+	    Clinical advice given?
+	  </label>
+	</td>
+	<td>
+	  <label class="checkbox inline">
+	    <input class="" type="checkbox" ng-model="editing.change_in_antibiotic_prescription">
+	    Change in antibiotic prescription?
+	  </label>
+	</td>
+      </tr>
+
+      <tr>
+	<td>
+	  <label class="checkbox inline">
+	    <input class="" type="checkbox" ng-model="editing.infection_control_advice_given">
+	    Infection control advice given?
+	  </label>
+	</td>
+	<td>
+	  <label class="checkbox inline">
+	    <input class="" type="checkbox" ng-model="editing.referred_to_opat">
+	    Referred to OPAT?
+	  </label>
+	</td>
+      </tr>
+    </table>
+  </form>
+  <div ng-show="editing.consistency_token">
+    <ul>
+      <li>
+	<b>
+	  [[editing.date | shortDate]]
+	  ([[editing.initials]]<span ng-show="editing.discussed_with"> with [[editing.discussed_with]]</span>)
+	  [[editing.reason_for_interaction]]
+	</b>
+      </li>
+      <li ng-show="editing.clinical_discussion">
+	<div markdown="clinical_discussion"></div>
+      </li>
+      <li ng-show="editing.agreed_plan">
+	<span class="underline">Agreed Plan:</span>
+	<div markdown="agreed_plan"></div>
+      </li>
+      <li ng-show="editing.clinical_advice_given">
+	Clinical Advice Given
+      </li>
+      <li ng-show="editing.change_in_antibiotic_prescribing">
+	Change in antibiotic prescribing
+      </li>
+      <li ng-show="editing.infection_control_advice_given">
+	Infection Control Advice Given
+      </li>
+      <li ng-show="editing.referred_to_opat">
+	Referred to OPAT
+      </li>
+    </ul>
+
+  </div>
+{% endblock %}
+  {% block modal_save %}
+  <button ng-hide="editing.consistency_token"
+     class="btn btn-primary" ng-click="save('save')">Save</button>
+  {% endblock %}
+  {% block modal_another %}{% endblock %}
+  {% block modal_cancel %}<button class="btn" ng-click="cancel()">Close</button>{% endblock %}
+

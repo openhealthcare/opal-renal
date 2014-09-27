@@ -1,0 +1,78 @@
+{% extends 'modal_base.html' %}
+{% block modal_body %}
+  <form class="form-horizontal">
+    <div class="form-group">
+      <label class="control-label col-sm-3">Date</label>
+      <div class="col-sm-8">
+	<input class="form-control" type="text" ng-model="editing.date" bs-datepicker>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-3">Profile</label>
+      <div class="col-sm-8">
+	<textarea class="form-control" ng-model="editing.profile" rows="5"></textarea>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-3">Other</label>
+      <div class="col-sm-8">
+	<textarea class="form-control" ng-model="editing.other" rows="5"></textarea>
+      </div>
+    </div>
+
+  </form>
+{% endblock %}
+
+{% block pop_buttons %}
+
+  <!-- Single button -->
+    <div class="btn-group pull-left" dropdown is-open="status.isopen">
+      <button type="button" class="btn btn-primary dropdown-toggle" ng-disabled="disabled">
+        <i class="fa fa-file-text"></i>
+        Bloods <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu" role="menu">
+        <li><a href="#"
+               data-profile="R3
+FBC"
+               ng-click="prepopulate($event)">Basic</a></li>
+        <li><a href="#" 
+               data-profile="R3 
+FBC 
+ANA 
+ANCA 
+antiGBM 
+SEP 
+C3 
+C4"
+               ng-click="prepopulate($event)">Acute</a></li>
+        <li><a href="#"
+               data-profile="R3 
+FBC 
+CRP 
+BCUltures"
+               ng-click="prepopulate($event)">Infection</a></li>
+        <li><a href="#"
+               data-profile="R3 
+FBC 
+LFTs 
+CS 
+Glu 
+CMV 
+HIV 
+HepB 
+HepC 
+Tissue Typing 
+Tissue Antibodies 
+G&S"
+               ng-click="prepopulate($event)">New Transplant</a></li>
+        <li><a href="#"
+               data-profile="R3 
+FBC 
+Tac"
+               ng-click="prepopulate($event)">Post Transplant</a></li>
+      </ul>
+    </div>
+
+
+{% endblock %}

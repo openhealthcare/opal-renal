@@ -1,0 +1,36 @@
+{% extends 'modal_base.html' %}
+{% block modal_body %}
+  <form class="form-horizontal">
+
+    <div class="form-group">
+      <label class="control-label col-sm-3">Estimated Date of Discharge</label>
+      <div class="col-sm-8">
+	<input class="form-control" type="text" ng-model="editing.date_of_discharge" bs-datepicker>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label col-sm-3">Date of Medical Fitness</label>
+      <div class="col-sm-8">
+	<input class="form-control" type="text" ng-model="editing.date_of_medical_fitness"
+               bs-datepicker>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label col-sm-3">Date of next outpatient appointment</label>
+      <div class="col-sm-8">
+	<input class="form-control" type="text" ng-model="editing.date_of_outpatient_appt" bs-datepicker>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label col-sm-3">Outpatient Tests</label>
+      <div class="col-sm-8">
+	<textarea class="form-control" ng-model="editing.outpatient_tests" rows="5"></textarea>
+      </div>
+    </div>
+
+    
+  </form>
+{% endblock %}
