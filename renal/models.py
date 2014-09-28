@@ -22,6 +22,9 @@ class Demographics(PatientSubrecord):
     ethnicity        = models.CharField(max_length=255, blank=True, null=True)
     gender           = models.CharField(max_length=255, blank=True, null=True)
 
+    def age(self):
+        import datetime
+        return int((datetime.date.today() - self.date_of_birth).days / 365.25  )
 
 class Location(EpisodeSubrecord):
     _is_singleton = True

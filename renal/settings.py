@@ -1,6 +1,7 @@
 # Django settings for OPAL Renal project.
 import commands
 import os
+import sys
 
 PROJECT_PATH = os.path.realpath(os.path.dirname(__file__))
 
@@ -122,7 +123,7 @@ MIDDLEWARE_CLASSES = (
 ROOT_URLCONF = 'renal.urls'
 
 # Python dotted path to the WSGI application used by Django's runserver.
-WSGI_APPLICATION = 'opal.wsgi.application'
+WSGI_APPLICATION = 'renal.wsgi.application'
 
 TEMPLATE_DIRS = (
     os.path.join(PROJECT_PATH, 'templates'),
@@ -213,7 +214,7 @@ OPAL_SCHEMA_MODULE = 'renal.schema'
 OPAL_OPTIONS_MODULE = 'renal.options'
 OPAL_FLOW_MODULE = 'renal.flow'
 OPAL_TAGS_MODULE = 'renal.tags'
-OPAL_BRAND_NAME = 'RENALity'
+OPAL_BRAND_NAME = 'OPAL - Renal'
 OPAL_EXTRA_APPLICATION = 'renal/extra_application.html'
 OPAL_LOG_OUT_MINUTES = 15
 OPAL_LOG_OUT_DURATION = OPAL_LOG_OUT_MINUTES*60*1000
@@ -240,7 +241,7 @@ COVERAGE_EXCLUDE_MODULES = ('renal.migrations', 'renal.tests',
                             'opal.migrations', 'opal.tests',
                             'opal.wsgi')
 
-from renal import wardrounds
+#from renal import wardrounds
 try:
     from local_settings import *
 except:

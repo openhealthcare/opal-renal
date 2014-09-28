@@ -56,5 +56,21 @@ list_schemas = {
         }
 }
 
-detail_columns = all_columns
+detail_columns = all_columns = [
+    models.Demographics,
+    models.Location,
+    models.Allergies,
+    models.PastMedicalHistory,
+    models.Diagnosis,
+    models.RRT,
+    models.Investigation,
+    models.Todo,
+    models.NextBlood,
+    models.DNR,
+    models.DischargePlan,
+    models.NursingNeeds,
+    models.Risk,
+    models.InfectionStatus,
+    models.MDTNeeds
+]
 extract_columns = all_columns

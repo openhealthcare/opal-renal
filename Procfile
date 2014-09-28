@@ -1,1 +1,1 @@
-web: gunicorn renal.wsgi
+web: DJANGO_SETTINGS_MODULE=renal.settings gunicorn renal.wsgi

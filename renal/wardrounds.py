@@ -3,11 +3,8 @@
 """
 import datetime
 
-from opal.models import Episode
-
 from wardround import WardRound
 
-from renal.models import RRT
 
 class DialysisToday(WardRound):
     name        = "Dialysis Today"
@@ -15,6 +12,9 @@ class DialysisToday(WardRound):
 
     @staticmethod
     def episodes():
+        from opal.models import Episode
+        from renal.models import RRT
+
         tld = datetime.date.today().strftime("%a").lower()
         kwargs = {'rrt__day_{0}'.format(tld): True}
         return Episode.objects.filter(active=True, **kwargs)
