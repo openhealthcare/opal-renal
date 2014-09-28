@@ -1,4 +1,4 @@
-{% extends 'modal_base.html' %}
+g{% extends 'modal_base.html' %}
 {% block modal_body %}
   <form class="form-horizontal">
     
@@ -13,6 +13,7 @@
       <label class="control-label col-sm-3">Access Site</label>
       <div class="col-sm-8">
 	<input class="form-control" type="text"
+               data-items="12"
                ng-model="editing.access_site"
                ng-options="d for d in access_site_list"
                bs-typeahead
@@ -108,7 +109,7 @@
     <div class="form-group">
       <label class="control-label col-sm-3">No RRT</label>
       <div class="col-sm-8">
-	<input class="form-control" type="checkbox" ng-model="editing.no_rt">
+	<input class="form-control" type="checkbox" ng-model="editing.no_rrt">
       </div>
     </div>
     

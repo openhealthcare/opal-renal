@@ -1,5 +1,12 @@
 
 Allergies. (Display above PMH)
 
+Access Site typeahed needs to be more items (Too many left X)
 
-Dialysis
+New Investigation Type
+e.g. Chest X-ray
+
+Statuses: To Be Requested, Pending, Completed
+When Completed: Summary
+
+Blood culture - add Requested, et cetera as well

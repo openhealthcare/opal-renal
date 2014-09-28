@@ -48,7 +48,7 @@ class Diagnosis(EpisodeSubrecord):
     _sort = 'date_of_diagnosis'
 
     condition = ForeignKeyOrFreeText(option_models['condition'])
-    provisional = models.BooleanField()
+    provisional = models.BooleanField(default=False)
     details = models.CharField(max_length=255, blank=True)
     date_of_diagnosis = models.DateField(blank=True, null=True)
 
@@ -120,12 +120,15 @@ class Investigation(EpisodeSubrecord):
     giardia               = models.CharField(max_length=20, blank=True)
     entamoeba_histolytica = models.CharField(max_length=20, blank=True)
     cryptosporidium       = models.CharField(max_length=20, blank=True)
+    status       = models.CharField(max_length=20, blank=True, null=True)
+    summary = models.TextField(blank=True, null=True)
 
 
 AccessSiteLookupList = type(*lookup_list('access_site', module=__name__))    
 
 class RRT(EpisodeSubrecord):
     _is_singleton = True
+    _title = 'RRT'
     
     haemodialysis = models.BooleanField(default=False)
     access_site = ForeignKeyOrFreeText(AccessSiteLookupList)
