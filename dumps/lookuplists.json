@@ -523,160 +523,6 @@
       "name": "VZV Viral Load"
     }
   ], 
-  "checkpoints_assay": [
-    {
-      "synonyms": [], 
-      "name": "ACC"
-    }, 
-    {
-      "synonyms": [], 
-      "name": "ACT/MIR"
-    }, 
-    {
-      "synonyms": [], 
-      "name": "BEL"
-    }, 
-    {
-      "synonyms": [], 
-      "name": "CMY I/MOX"
-    }, 
-    {
-      "synonyms": [], 
-      "name": "CMY II"
-    }, 
-    {
-      "synonyms": [], 
-      "name": "CTX-M-1 group"
-    }, 
-    {
-      "synonyms": [], 
-      "name": "CTX-M-1 like"
-    }, 
-    {
-      "synonyms": [], 
-      "name": "CTX-M-15 like"
-    }, 
-    {
-      "synonyms": [], 
-      "name": "CTX-M-2 group"
-    }, 
-    {
-      "synonyms": [], 
-      "name": "CTX-M-3 like"
-    }, 
-    {
-      "synonyms": [], 
-      "name": "CTX-M-32 like"
-    }, 
-    {
-      "synonyms": [], 
-      "name": "CTX-M-8 & -25 group"
-    }, 
-    {
-      "synonyms": [], 
-      "name": "CTX-M-9 group"
-    }, 
-    {
-      "synonyms": [], 
-      "name": "DHA"
-    }, 
-    {
-      "synonyms": [], 
-      "name": "FOX"
-    }, 
-    {
-      "synonyms": [], 
-      "name": "GES"
-    }, 
-    {
-      "synonyms": [], 
-      "name": "GIM"
-    }, 
-    {
-      "synonyms": [], 
-      "name": "IMP"
-    }, 
-    {
-      "synonyms": [], 
-      "name": "KPC"
-    }, 
-    {
-      "synonyms": [], 
-      "name": "NDM"
-    }, 
-    {
-      "synonyms": [], 
-      "name": "OXA-23-like"
-    }, 
-    {
-      "synonyms": [], 
-      "name": "OXA-24-like"
-    }, 
-    {
-      "synonyms": [], 
-      "name": "OXA-48-like"
-    }, 
-    {
-      "synonyms": [], 
-      "name": "OXA-58-like"
-    }, 
-    {
-      "synonyms": [], 
-      "name": "PER"
-    }, 
-    {
-      "synonyms": [], 
-      "name": "SHV E240K"
-    }, 
-    {
-      "synonyms": [], 
-      "name": "SHV G238A"
-    }, 
-    {
-      "synonyms": [], 
-      "name": "SHV G238S"
-    }, 
-    {
-      "synonyms": [], 
-      "name": "SHV wt"
-    }, 
-    {
-      "synonyms": [], 
-      "name": "SPM"
-    }, 
-    {
-      "synonyms": [], 
-      "name": "TEM E104K"
-    }, 
-    {
-      "synonyms": [], 
-      "name": "TEM G238S"
-    }, 
-    {
-      "synonyms": [], 
-      "name": "TEM R164C"
-    }, 
-    {
-      "synonyms": [], 
-      "name": "TEM R164H"
-    }, 
-    {
-      "synonyms": [], 
-      "name": "TEM R164S"
-    }, 
-    {
-      "synonyms": [], 
-      "name": "TEM wt"
-    }, 
-    {
-      "synonyms": [], 
-      "name": "VEB"
-    }, 
-    {
-      "synonyms": [], 
-      "name": "VIM"
-    }
-  ], 
   "line_type": [], 
   "micro_test_hiv": [
     {
@@ -1738,28 +1584,6 @@
     {
       "synonyms": [], 
       "name": "Zimbabwe"
-    }
-  ], 
-  "specimin_appearance": [
-    {
-      "synonyms": [], 
-      "name": "Mucoid"
-    }, 
-    {
-      "synonyms": [], 
-      "name": "Mucopurulent"
-    }, 
-    {
-      "synonyms": [], 
-      "name": "Mucosalivary"
-    }, 
-    {
-      "synonyms": [], 
-      "name": "Purulent"
-    }, 
-    {
-      "synonyms": [], 
-      "name": "Salivary"
     }
   ], 
   "micro_test_syphilis_serology": [
@@ -4326,7 +4150,6 @@
       "name": "Zidovudine"
     }
   ], 
-  "findings_rash_distribution": [], 
   "micro_test_single_test_pos_neg": [
     {
       "synonyms": [
@@ -4363,51 +4186,6 @@
         "Viral Haemorrhagic Fever PCR"
       ], 
       "name": "VHF PCR"
-    }
-  ], 
-  "specimin": [
-    {
-      "synonyms": [
-        "Bronchial aspirates"
-      ], 
-      "name": "BA"
-    }, 
-    {
-      "synonyms": [
-        "Broncho-alveolar lavage"
-      ], 
-      "name": "BAL"
-    }, 
-    {
-      "synonyms": [
-        "ET secretions", 
-        "Endotracheal secretions"
-      ], 
-      "name": "ETT"
-    }, 
-    {
-      "synonyms": [
-        "Induced sputum"
-      ], 
-      "name": "ISPU"
-    }, 
-    {
-      "synonyms": [
-        "Non-directed bronchoalveolar lavage"
-      ], 
-      "name": "NBL"
-    }, 
-    {
-      "synonyms": [
-        "Sputum"
-      ], 
-      "name": "SPU"
-    }, 
-    {
-      "synonyms": [
-        "Tracheal aspirate"
-      ], 
-      "name": "TA"
     }
   ], 
   "micro_test_other": [
@@ -4480,15 +4258,12 @@
       "name": "VZV Serology"
     }
   ], 
-  "findings_rash_type": [], 
   "micro_test_swab_pcr": [
     {
       "synonyms": [], 
       "name": "Swab PCR"
     }
   ], 
-  "management_clinics": [], 
-  "organism_details": [], 
   "antimicrobial_route": [
     {
       "synonyms": [
@@ -4522,8 +4297,6 @@
     }
   ], 
   "antimicrobial_frequency": [], 
-  "management_follow_up": [], 
-  "antimicrobial_susceptability": [], 
   "antimicrobial_adverse_event": [], 
   "micro_test_hepititis_b_serology": [
     {
@@ -4533,7 +4306,76 @@
       "name": "HBV Serology"
     }
   ], 
-  "unplanned_stop": [], 
+  "access_site": [
+    {
+      "synonyms": [], 
+      "name": "Abdominal Graft"
+    }, 
+    {
+      "synonyms": [], 
+      "name": "Left Arm Graft"
+    }, 
+    {
+      "synonyms": [], 
+      "name": "Left BCF"
+    }, 
+    {
+      "synonyms": [], 
+      "name": "Left BVT"
+    }, 
+    {
+      "synonyms": [], 
+      "name": "Left Central Line"
+    }, 
+    {
+      "synonyms": [], 
+      "name": "Left Femoral Line "
+    }, 
+    {
+      "synonyms": [], 
+      "name": "Left Leg Graft"
+    }, 
+    {
+      "synonyms": [], 
+      "name": "Left RCF"
+    }, 
+    {
+      "synonyms": [], 
+      "name": "Left Tunneled Line"
+    }, 
+    {
+      "synonyms": [], 
+      "name": "Right Arm Graft"
+    }, 
+    {
+      "synonyms": [], 
+      "name": "Right BCF"
+    }, 
+    {
+      "synonyms": [], 
+      "name": "Right BVT"
+    }, 
+    {
+      "synonyms": [], 
+      "name": "Right Central Line"
+    }, 
+    {
+      "synonyms": [], 
+      "name": "Right Femoral Line "
+    }, 
+    {
+      "synonyms": [], 
+      "name": "Right Leg Graft"
+    }, 
+    {
+      "synonyms": [], 
+      "name": "Right RCF"
+    }, 
+    {
+      "synonyms": [], 
+      "name": "Right Tunneled Line"
+    }
+  ], 
   "micro_test_mcs": [
     {
       "synonyms": [], 
