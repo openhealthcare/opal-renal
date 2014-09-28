@@ -40,7 +40,7 @@ model_names = [
     'micro_test_stool_pcr',
     'micro_test_swab_pcr',
     'micro_test_syphilis_serology',
-    'micro_test_investigation',
+    'micro_test_iv',
     'micro_test_viral_load',
 ]
 
