@@ -157,6 +157,7 @@ INSTALLED_APPS = (
     'south',
     'opal',
     'renal',
+    'wardround',
     'django.contrib.admin',
 )
 
@@ -214,7 +215,7 @@ OPAL_SCHEMA_MODULE = 'renal.schema'
 OPAL_OPTIONS_MODULE = 'renal.options'
 OPAL_FLOW_MODULE = 'renal.flow'
 OPAL_TAGS_MODULE = 'renal.tags'
-OPAL_BRAND_NAME = 'RENAL Patient Lists'
+OPAL_BRAND_NAME = 'RENALity'
 OPAL_EXTRA_APPLICATION = 'renal/extra_application.html'
 OPAL_LOG_OUT_MINUTES = 15
 OPAL_LOG_OUT_DURATION = OPAL_LOG_OUT_MINUTES*60*1000

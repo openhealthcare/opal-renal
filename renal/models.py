@@ -1,5 +1,5 @@
 """
-ELCID implementation specific models!
+Renal implementation specific models!
 """
 from django.db import models
 
