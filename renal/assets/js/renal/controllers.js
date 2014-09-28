@@ -7,7 +7,7 @@
 // TODO: Set the controller more explicitly via flow
 //
 controllers.controller(
-    'ElcidDischargeEpisodeCtrl', 
+    'RenalDischargeEpisodeCtrl', 
     function($scope, $timeout,
              $modalInstance, episode,
              tags) {

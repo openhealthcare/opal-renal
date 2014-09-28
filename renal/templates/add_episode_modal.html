@@ -59,23 +59,29 @@
     <div class="control-group">
       <label>Teams</label>
       <div >
-	{% for team in teams %}{% if not team.parent %}{% if team.direct_add %}
-          {% if team.has_subtags %}
-            <h4>{{team.title}}:</h4>
-              {% for subteam in team.team_set.all %}
+	{% for team in teams %}
+          {% if not team.parent %}
+            {% if team.direct_add %}
+              {% if team.has_subtags %}
+                <h4>{{team.title}}:</h4>
+                {% for subteam in team.team_set.all %}
+                  {% if subteam.direct_add %}
+	            <label class="checkbox">
+	              <input type="checkbox" ng-model="editing.tagging[0].{{subteam.name}}">
+	              {{subteam.title}}
+	            </label>
+                  {% endif %}
+                {% endfor %}
+              {% else %}
+                <h4>{{team.title}}:</h4>
 	        <label class="checkbox">
-	          <input type="checkbox" ng-model="editing.tagging[0].{{subteam.name}}">
-	          {{subteam.title}}
-	        </label>            
-              {% endfor %}
-          {% else %}
-            <h4>{{team.title}}:</h4>
-	    <label class="checkbox">
-	      <input type="checkbox" ng-model="editing.tagging[0].{{team.name}}">
-	      {{team.title}}
-	    </label>
+	          <input type="checkbox" ng-model="editing.tagging[0].{{team.name}}">
+	          {{team.title}}
+	        </label>
+              {% endif %}
+            {% endif %}
           {% endif %}
-        {% endif %}{% endif %}{% endfor %}
+        {% endfor %}
       </div>
     </div>
     {% endif %}

@@ -11,6 +11,8 @@ from renal import views
 urlpatterns = patterns(
     '',
     url(r'^test/500$', views.Error500View.as_view(), name='test-500'),
+    url(r'^review-sheet/list/(?P<tag>[a-z_\-]+)/(?P<subtag>[a-z_\-]+)/?$', 
+        views.ReviewSheetView.as_view())
 )
 
 urlpatterns += opatterns

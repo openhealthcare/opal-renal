@@ -1,7 +1,9 @@
+"""
+Schema for OPAL Renal implementation
+"""
 
 from renal import models
 from opal import models as omodels
-#from infectioncontrol import models as icmodels
 
 list_columns = [
     models.Demographics,
@@ -44,7 +46,6 @@ all_columns = [
     models.Risk,
     models.InfectionStatus,
     models.MDTNeeds
-
 ]
 
 list_schemas = {
@@ -55,42 +56,5 @@ list_schemas = {
         }
 }
 
-detail_columns = [
-    # models.Demographics,
-    # models.ContactDetails,
-    # models.Carers,
-    # models.Location,
-    # omodels.Tagging,
-    # models.Diagnosis,
-    # models.PresentingComplaint,
-    # obsmodels.Observation,
-    # models.PastMedicalHistory,
-    # models.Antimicrobial,
-    # models.Allergies,
-    # models.MicrobiologyTest,
-    # models.Line,
-    # models.OPATLineAssessment,
-    # models.MicrobiologyInput,
-    # models.OPATReview,
-    # models.Travel,
-    # models.Appointment,
-    # models.Todo,
-    # models.OPATOutstandingIssues,
-    # models.GeneralNote,
- ]
-
-extract_columns = [
-    # omodels.Tagging,
-    # models.Demographics,
-    # models.Location,
-    # models.Diagnosis,
-    # models.Antimicrobial,
-    # models.Allergies,
-    # models.PastMedicalHistory,
-    # models.MicrobiologyInput,
-    # models.MicrobiologyTest,
-    # models.Travel,
-    # models.Todo,
-    # models.GeneralNote,
-    ]
-
+detail_columns = all_columns
+extract_columns = all_columns

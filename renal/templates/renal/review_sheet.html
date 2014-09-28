@@ -1,0 +1,24 @@
+{% load staticfiles %}
+<html>
+  <head>
+    <link href="{% static "bootstrap-3.1.0/css/bootstrap.css" %}" rel="stylesheet" media="all">
+  </head>
+  <body>
+    {% for episode in episodes %}
+      <div class="container">
+        <div class="page-header">
+          {% with episode.patient.demographics_set.get as demographics %} 
+            <h1>
+              {{ demographics.name }}
+              <small>
+                {{ demographics.date_of_birth }}
+              </small>
+            </h1>
+          {% endwith %}
+        </div>
+        <p class="lead">THIS IS A LEAD Paragraph</p>
+
+      </div>
+    {% endfor %}
+  </body>
+</html>

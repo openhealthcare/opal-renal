@@ -9,7 +9,7 @@ flows = {
             'template'  : '/templates/modals/hospital_number.html/'
         },
         'exit': {
-            'controller': 'DischargeEpisodeCtrl',
+            'controller': 'RenalDischargeEpisodeCtrl',
             'template'  : '/templates/modals/discharge_episode.html/'
         }
     }

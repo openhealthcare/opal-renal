@@ -27,62 +27,77 @@
     </div>
     <div ng-show="editing.haemodialysis">
       <h4>Dialysis Days</h4>
-      <table>
+      <table class="table">
         <tr>
 	  <td>
 	    <label class="checkbox inline">
 	      <input class="" type="checkbox" ng-model="editing.day_mon">
-	      Monday
+	      Mon
 	    </label>
 	  </td>
 	  <td>
 	    <label class="checkbox inline">
 	      <input class="" type="checkbox" ng-model="editing.day_tue">
-	      Tuesday
+	      Tue
 	    </label>
 	  </td>
 	  <td>
 	    <label class="checkbox inline">
 	      <input class="" type="checkbox" ng-model="editing.day_wed">
-	      Wednesday
+	      Wed
 	    </label>
 	  </td>
 	  <td>
 	    <label class="checkbox">
 	      <input class="" type="checkbox" ng-model="editing.day_thu">
-	      Thursday
+	      Thu
 	    </label>
 	  </td>
 	  <td>
 	    <label class="checkbox inline">
 	      <input class="" type="checkbox" ng-model="editing.day_fri">
-	      Friday
+	      Fri
 	    </label>
 	  </td>
 	  <td>
 	    <label class="checkbox inline">
 	      <input class="" type="checkbox" ng-model="editing.day_sat">
-	      Saturday
+	      Sat
 	    </label>
 	  </td>
 	  <td>
 	    <label class="checkbox inline">
 	      <input class="" type="checkbox" ng-model="editing.day_sun">
-	      Sunday
+	      Sun
 	    </label>
 	  </td>
         </tr>    
       </table>
       <a href="" class="btn btn-primary" ng-click="prepopulate($event)" 
-         data-day_mon="true" data-day_wed="true" data-day_fri="true">
+         data-day_mon="true"
+         data-day_tue="false"
+         data-day_wed="true"
+         data-day_thu="false"
+         data-day_fri="true"
+         data-day_sat="false"
+         data-day_sun="false">
+        <i class="fa fa-file-text"></i> 
         MWF
       </a>
       <a href="" class="btn btn-primary" ng-click="prepopulate($event)" 
-         data-day_tue="true" data-day_thu="true" data-day_sat="true">
+         data-day_mon="false"
+         data-day_tue="true" 
+         data-day_wed="false"
+         data-day_thu="true" 
+         data-day_fri="false"
+         data-day_sat="true"
+         data-day_sun="false"
+         >
+        <i class="fa fa-file-text"></i> 
         TTS
       </a>
     </div>
-
+    <hr />
     <div class="form-group">
       <label class="control-label col-sm-3">Peritonealdialysis</label>
       <div class="col-sm-8">
@@ -121,7 +136,6 @@
 
       </div>
     </div>
-
     
   </form>
 {% endblock %}
