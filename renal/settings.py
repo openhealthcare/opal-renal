@@ -113,7 +113,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'opal.middleware.DjangoReversionWorkaround',
-    'reversion.middleware.RevisionMiddleware',
+#    'reversion.middleware.RevisionMiddleware',
     'axes.middleware.FailedLoginMiddleware',
     # Uncomment the next line for simple clickjacking protection:
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
