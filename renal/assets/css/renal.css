@@ -1,3 +1,35 @@
 #subtags {
     margin-left: 350px;
 }
+
+
+#main-navbar {
+    background-color: #dff0d8;
+    border: solid #1b926c;
+    border-width: 0 0 2px 0;
+}
+
+
+.navbar-nav.nav-tabs li:hover a,
+.navbar-nav.nav-tabs li.active:hover a,
+.navbar-nav.nav-tabs li.active a,
+.navbar-nav.nav-tabs li.active{
+    background: #dff0d8;
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus,    
+#main-navbar .navbar-nav li:hover {
+    background-color: #1b926c;
+}
+
+.panel-warning > .panel-heading {
+    background: #dff0d8;
+    border-colour: #1b926c;
+    color: #8a6d3b;   
+}
+
+.panel-warning {
+    border-color: #1b926c;
+}
