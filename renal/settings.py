@@ -240,6 +240,7 @@ COVERAGE_EXCLUDE_MODULES = ('renal.migrations', 'renal.tests',
                             'opal.migrations', 'opal.tests',
                             'opal.wsgi')
 
+from renal import wardrounds
 try:
     from local_settings import *
 except:
