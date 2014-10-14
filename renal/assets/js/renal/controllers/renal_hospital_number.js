@@ -4,9 +4,11 @@ angular.module('opal.controllers').controller(
              $timeout,
              $modal,
              $modalInstance,
+             $rootScope,
              $http,
              $q,
              Episode,
+             Item, 
              schema,
              options,
              tags,
@@ -45,6 +47,8 @@ angular.module('opal.controllers').controller(
             var teams = episode.tagging[0].makeCopy();
             teams.renal_all = true;
             teams.nursing = true;
+            teams[$scope.tags.tag] = true;
+            teams[$scope.tags.subtag] = true;
 
 
             // TODO - these are promises - the API is nicer than this !
@@ -111,7 +115,7 @@ angular.module('opal.controllers').controller(
                         };
 			if (result == 'open-new') {
 			    // User has chosen to open a new episode
-                            $scope.add_for_patient(patient);
+                            $scope.addForPatient(patient);
 			} else {
 			    // User has chosen to reopen an episode, or cancelled
 			    $modalInstance.close(result);
@@ -166,12 +170,18 @@ angular.module('opal.controllers').controller(
 		}
 	    }).result.then(
                 function(result){
-                if(result){ // We made an episode!
-                    $scope.tag_and_close(result);
-                }else{
-				    $modalInstance.close(result);
-                }                    
-                 
+                    if(result){ // We made an episode!
+                        var pmhs = patient.episodes[_.keys(patient.episodes)[0]].past_medical_history
+                        _.each(pmhs, function(pmh){
+                            var newattrs = pmh.makeCopy();
+                            newattrs.episode_id = result.id;
+                            result.newItem('past_medical_history').save(newattrs);
+                        });
+                        $scope.tag_and_close(result);
+                    }else{
+		        $modalInstance.close(result);
+                    }                    
+                    
                 },
                 function(result){
                     $modalInstance.close(result);

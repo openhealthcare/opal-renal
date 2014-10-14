@@ -4,7 +4,6 @@
 // settings.py
 //
 // TODO: Refactor the inclusion to be via a plugin.
-// TODO: Set the controller more explicitly via flow
 //
 controllers.controller(
     'RenalDischargeEpisodeCtrl', 
@@ -75,10 +74,9 @@ controllers.controller(
             }
 
 	    if ($scope.editing.category != 'Followup') {
-	        taggingAttrs[currentTag] = false;
-                if(currentSubTag != 'all'){
-                    taggingAttrs[currentSubTag] = false;
-                }
+                _.each(_.keys(taggingAttrs), function(team){
+                    taggingAttrs[team] = false;
+                });
 	    }
 
 	    tagging.save(taggingAttrs).then(function(){
