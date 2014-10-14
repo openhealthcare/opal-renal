@@ -1,7 +1,15 @@
 <span ng-show="item.haemodialysis">
   Haemodialysis: <br />
   Access Site: [[ item.access_site ]] <br />
-  Regional Unit: [[ item.regional_unit ]]
+  Regional Unit: [[ item.regional_unit ]] <br />
+  Days: 
+  <span ng-show="item.day_mon">Mon</span>
+  <span ng-show="item.day_tue">Tue</span>
+  <span ng-show="item.day_wed">Wed</span>
+  <span ng-show="item.day_thu">Thu</span>
+  <span ng-show="item.day_fri">Fri</span>
+  <span ng-show="item.day_sat">Sat</span>
+  <span ng-show="item.day_sun">Sun</span>
 </span>
 <span ng-show="item.peritonealdialysis">
   Peritonealdialysis <br />
@@ -13,5 +21,3 @@
   Transplant <br />
   Donor type [[item.donor_type ]]
 </span>
-
-
