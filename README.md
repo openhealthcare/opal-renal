@@ -1,4 +1,4 @@
-This is a Renal patient management application using the [OPAL](https://github.com/openhealthcare/opal) framework.
+This is a Renal patient management application built using the [OPAL](https://github.com/openhealthcare/opal) framework.
 
 ## What problem does this solve?
 
