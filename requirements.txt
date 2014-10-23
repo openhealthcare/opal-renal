@@ -15,3 +15,4 @@ supervisor
 django-debug-toolbar
 -e git://github.com/openhealthcare/opal.git@renal#egg=opal
 -e git://github.com/openhealthcare/opal-wardround.git#egg=wardround
+requests

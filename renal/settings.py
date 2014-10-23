@@ -241,6 +241,14 @@ COVERAGE_EXCLUDE_MODULES = ('renal.migrations', 'renal.tests',
                             'opal.migrations', 'opal.tests',
                             'opal.wsgi')
 
+#These are new required settings !
+INTEGRATING = True
+GLOSSOLALIA_URL = 'http://localhost:5000/'
+GLOSSOLALIA_NAME = 'renal'
+DEFAULT_DOMAIN = 'http://RENALL/'
+
+
+
 #from renal import wardrounds
 try:
     from local_settings import *
