@@ -1,3 +1,12 @@
+! Important Notice !
+
+This application is unmaintained and significantly outdated.
+
+Refer to the http://opal.openhealthcare.org.uk documentation for current information about Opal
+
+This was a hack day project. Its no longer supported.
+
+
 This is a Renal patient management application built using the [OPAL](https://github.com/openhealthcare/opal) framework.
 
 ## What problem does this solve?
